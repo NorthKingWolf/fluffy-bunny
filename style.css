@@ -1,0 +1,746 @@
+body {
+	background: #111;
+	background-attachment: fixed;
+	background-size: cover;
+  color: #f9f9f9;
+}
+
+
+:root{
+	--pink: #ff60b4;
+  --blue: #72efff; 
+}
+
+ A {text-decoration: none;}
+
+#out-all {position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; display: flex; align-items: center; justify-content: center;}
+
+#f1 {position: absolute; width: 600px; height: 400px; display: flex; align-items: center; justify-content: center; flex-direction: column; background: #111;}
+.decidir {display: flex; align-items: center; justify-content: center;}
+.si, .no, .weno, .dale, .salu, .copy, #f13 a, span.go, .carta {font: 25px 'VT323', monospace; margin: 10px; opacity: 0;
+   animation-name: visible;
+  animation-duration: 1s; 
+animation-delay: 3.5s;
+    animation-fill-mode: forwards; cursor: pointer; color: #f9f9f9;
+}
+
+.rega, .ojo, .afi, .anillo, .marry, .meme, .meme2, .yes {font: 25px 'VT323', monospace; margin: 10px; opacity: 0;
+   animation-name: visible;
+  animation-duration: 1s; 
+animation-delay: 7s;
+    animation-fill-mode: forwards; cursor: pointer; text-align: center;
+}
+
+#f2, #f3, #f4, #f5, #f6 {position: absolute; width: 600px; height: 400px; display: flex; align-items: center; justify-content: center; flex-direction: column; display: none;} 
+
+#f7 {position: absolute; width: 850px; height: 550px; background: url(https://i.imgur.com/kx3psEN.png); background-size: cover; display: none; align-items: center; justify-content: center; flex-direction: column;}
+
+#f8, #f9 {position: absolute; bottom: 150px; left: 150px; right: 150px; display: none; align-items: center; justify-content: center; flex-direction: column;}
+
+#f10 {position: absolute; bottom: 140px; left: 150px; right: 150px; height: 160px; display: none; align-items: center; justify-content: center;}
+.box {width: 100px; height: 100px; background: url(https://i.imgur.com/ViqP2fB.png); background-size: cover; margin: 20px; cursor: pointer;}
+.box:hover {background: url(https://i.imgur.com/FIrcwmM.png); background-size: cover;}
+
+#f11 {position: absolute; top:120px; transform: scale(.7); display: none; flex-direction: column;}
+
+#f12 {position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px; background: #111; display: none; align-items: center; justify-content: center; flex-direction: column;}
+
+#f14 { background: #111; position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px;
+font: 26px 'VT323', monospace; text-align:justify; display: none;}
+#f15 { background: #111; position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px;
+font: 26px 'VT323', monospace; text-align:justify; display: none;}
+#f16 {position: absolute; top: 0px; right: 0px; left: 0px; bottom: 0px; display: none; align-items: center; justify-content: center; flex-direction: column;}
+
+#f17 {position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; display: none; align-items: center; justify-content: center; flex-direction: column;}
+.ring {width: 150px; height: 150px;  background: url(https://i.imgur.com/oEs8TdL.png); background-size: cover;}
+.ichigo{
+  width:220px;
+  height:220px;
+  background:url(images/22.png) center center no-repeat;
+  background-size: contain;
+  image-rendering: pixelated;
+}
+
+#f18 {position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px; background: #111; display: none;}
+#f19, #f20, #f21, #f22 {position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px; background: #111; display: none; align-items: center; justify-content: center; flex-direction: column;}
+#f22{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  background:#111;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+#f22 .stars{
+  position:absolute;
+  inset:0;
+  background-image:
+  radial-gradient(#fff 1px, transparent 1px),
+  radial-gradient(#ff60b4 1px, transparent 1px),
+  radial-gradient(#72efff 1px, transparent 1px);
+  background-size:80px 80px,120px 120px,160px 160px;
+  animation: drift 25s linear infinite;
+  opacity:.45;
+}
+
+#f22 .final-box{
+  position:relative;
+  z-index:2;
+  max-width:950px;
+  padding:40px;
+  text-align:center;
+  color:#fff;
+  font:30px 'VT323', monospace;
+  line-height:1.45;
+}
+
+#f22 .line{
+  margin:18px 0;
+  opacity:0;
+}
+
+#f22 .rabbit{
+  width:180px;
+  height:180px;
+  margin:25px auto 10px;
+  background:url(images/22.png) center center no-repeat;
+  background-size:contain;
+  image-rendering:pixelated;
+  opacity:0;
+  transform:translateY(20px);
+}
+
+#f22 .final-end{
+  margin-top:20px;
+  font-size:34px;
+  color:#ff60b4;
+  text-shadow:0 0 10px #ff60b4;
+  opacity:0;
+}
+
+.fade1{animation:fadeUp 1s forwards .5s;}
+.fade2{animation:fadeUp 1s forwards 3s;}
+.fade3{animation:fadeUp 1s forwards 6s;}
+.fade4{animation:fadeUp 1s forwards 9s;}
+.fade5{animation:fadeRabbit 1s forwards 12s;}
+.fade6{animation:fadeUp 1s forwards 14s;}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeRabbit{
+  from{opacity:0; transform:translateY(25px) scale(.8);}
+  to{opacity:1; transform:translateY(0) scale(1);}
+}
+
+@keyframes drift{
+  from{transform:translateY(0);}
+  to{transform:translateY(120px);}
+}
+h1 {
+  overflow: hidden; 
+  border-right: .15em solid #fff; 
+  color: #fff;
+  white-space: nowrap;  
+  margin: 0 auto; 
+  letter-spacing: .03em; 
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  font: 30px 'VT323', monospace;
+}
+h3 {
+  overflow: hidden; 
+  border-right: .15em solid transparent; 
+  color: #fff;
+  white-space: nowrap;  
+  margin: 0 auto; 
+  letter-spacing: .03em; 
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-start;
+  font: 30px 'VT323', monospace;
+}
+
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: .15em solid #fff;
+  animation: typing 2.5s steps(40, end) forwards, blink-caret .75s step-end infinite;
+}
+
+.line1 {
+  animation-delay: 0s, 0s;
+}
+
+.line2 {
+  animation-delay: 2.8s, 2.8s;
+}
+
+h2 {
+  overflow: hidden; 
+  border-right: .15em solid transparent; 
+  color: #fff;
+  white-space: nowrap;  
+  margin: 0 auto; 
+  letter-spacing: .03em; 
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  font: 30px 'VT323', monospace;
+  animation-delay: 3.5s; width: 0px; animation-fill-mode: forwards; text-align: center;
+}
+
+.img1 {width: 150px; height: 150px; background: url(images/4.png); background-size: cover;}
+
+#ico{
+  position:absolute;
+  bottom:5px;
+  left:360px;
+  width:130px;
+  height:130px;
+  background:url(images/21.png) no-repeat center;
+  background-size:contain;
+  image-rendering:pixelated;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 105% }
+}
+
+@keyframes visible {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #fff }
+}
+
+
+
+/* ======================================
+   ✨ PATCH AVENTURA LEGENDARIA ✨
+   pegar al final de tu CSS
+====================================== */
+
+/* Pantallas intro */
+#f1,#f2,#f3,#f4,#f5,#f6{
+  overflow:hidden;
+  background:#111;
+  position:absolute;
+}
+
+/* estrellas pixeladas */
+#f1::before,
+#f2::before,
+#f3::before,
+#f4::before,
+#f5::before,
+#f6::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(#fff 1px, transparent 1px),
+    radial-gradient(#ff60b4 1px, transparent 1px),
+    radial-gradient(#72efff 1px, transparent 1px);
+  background-size:70px 70px,120px 120px,180px 180px;
+  opacity:.42;
+  animation:starsFall 26s linear infinite;
+  z-index:0;
+}
+
+/* estrella fugaz */
+#f1::after,
+#f2::after,
+#f3::after,
+#f4::after,
+#f5::after,
+#f6::after{
+  content:'';
+  position:absolute;
+  width:140px;
+  height:2px;
+  top:18%;
+  left:-180px;
+  background:linear-gradient(to right,#fff,transparent);
+  box-shadow:0 0 8px #fff;
+  animation:shootingStar 7s linear infinite;
+  z-index:1;
+}
+
+/* contenido arriba */
+#f1 *,
+#f2 *,
+#f3 *,
+#f4 *,
+#f5 *,
+#f6 *{
+  position:relative;
+  z-index:2;
+}
+
+/* cajas bonitas */
+#f1,#f2,#f3,#f4,#f5,#f6{
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:
+  0 0 18px rgba(255,96,180,.08),
+  inset 0 0 25px rgba(255,255,255,.02);
+}
+
+/* texto más bonito */
+h1,h2,h3{
+  text-shadow:0 0 8px rgba(255,255,255,.15);
+}
+
+/* fade entrada */
+#f1 h1,
+#f2 h1,
+#f3 h1,
+#f4 h2,#f4 h3,
+#f5 h2,#f5 h3,
+#f6 h2,#f6 h3,
+#f6 .img1{
+  opacity:0;
+  animation:fadeUpText 1s ease forwards;
+}
+
+#f1 .decidir,
+#f2 .decidir,
+#f3 .decidir,
+#f4 .decidir,
+#f5 .decidir,
+#f6 .afi{
+  opacity:0;
+  animation:fadeUpText 1s ease forwards;
+  animation-delay:1.8s;
+}
+
+/* botones hover */
+.si:hover,.no:hover,.weno:hover,.dale:hover,
+.rega:hover,.ojo:hover,.afi:hover{
+  color:#ff60b4;
+  transform:scale(1.04);
+  transition:.25s;
+}
+
+/* pantalla final mejora */
+#f22 .final-box{
+  text-shadow:0 0 10px rgba(255,255,255,.08);
+}
+
+/* animaciones */
+@keyframes starsFall{
+  from{transform:translateY(0);}
+  to{transform:translateY(140px);}
+}
+
+@keyframes shootingStar{
+  0%{transform:translate(0,0);opacity:0;}
+  10%{opacity:1;}
+  100%{transform:translate(1300px,320px);opacity:0;}
+}
+
+@keyframes fadeUpText{
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* =====================================
+   PATCH COMPLETO RESPONSIVE + ELEGANTE
+===================================== */
+
+/* Pantallas principales */
+#f1,#f2,#f3,#f4,#f5,#f6{
+  width:min(92vw, 980px);
+  min-height:430px;
+  height:auto;
+  padding:34px;
+  box-sizing:border-box;
+  border-radius:10px;
+}
+
+/* pantallas full */
+#f12,#f14,#f15,#f18,#f19,#f20,#f21,#f22{
+  padding:35px;
+  box-sizing:border-box;
+}
+
+/* títulos */
+h1,h2,h3{
+  width:100%;
+  max-width:900px;
+  margin:0 auto 18px auto;
+  text-align:center;
+  line-height:1.32;
+  white-space:normal;
+  overflow:visible;
+  word-break:break-word;
+}
+
+/* tamaños cómodos */
+h1{font-size:34px;}
+h2{font-size:30px;}
+h3{font-size:28px;}
+
+/* elimina ancho raro del typing */
+.typing{
+  white-space:normal;
+  width:auto;
+  border-right:none;
+  animation:none;
+}
+
+/* botones */
+.decidir{
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:18px;
+}
+
+.si,.no,.weno,.dale,.rega,.ojo,.afi,
+.salu,.copy,.anillo,.marry,.meme,.meme2,.yes{
+  text-align:center;
+  line-height:1.2;
+  padding:6px 10px;
+}
+
+/* cartas largas */
+#f14,#f15,#f22{
+  display:none;
+  align-items:center;
+  justify-content:center;
+}
+
+#f14,
+#f15{
+  font:28px 'VT323', monospace;
+}
+
+#f14 > div,
+#f15 > div,
+#f22 .final-box{
+  max-width:980px;
+  width:100%;
+  margin:auto;
+  line-height:1.45;
+}
+
+/* imágenes */
+.img1,.ichigo,.ring{
+  flex-shrink:0;
+}
+
+/* móvil */
+@media (max-width:768px){
+
+  #f1,#f2,#f3,#f4,#f5,#f6{
+    width:95vw;
+    min-height:460px;
+    padding:22px;
+  }
+
+  h1{font-size:28px;}
+  h2{font-size:25px;}
+  h3{font-size:24px;}
+
+  .si,.no,.weno,.dale,.rega,.ojo,.afi,
+  .salu,.copy,.anillo,.marry,.meme,.meme2,.yes{
+    font-size:24px;
+  }
+
+  #f14,#f15,#f22{
+    padding:22px;
+  }
+
+  #f22 .final-box{
+    font-size:25px;
+  }
+
+  .ichigo{
+    width:170px;
+    height:170px;
+  }
+}
+
+/* ultra pequeño */
+@media (max-width:480px){
+
+  h1{font-size:24px;}
+  h2{font-size:22px;}
+  h3{font-size:21px;}
+
+  .decidir{
+    flex-direction:column;
+  }
+
+  .ichigo{
+    width:145px;
+    height:145px;
+  }
+}
+/* =========================
+   FIX ESCENA F7 RPG
+========================= */
+
+#f7{
+  width:850px;
+  height:550px;
+  padding:0;
+  overflow:hidden;
+  position:absolute;
+}
+
+#f7 h1,
+#f7 h2,
+#f7 h3{
+  width:auto;
+  max-width:none;
+  margin:0;
+  white-space:nowrap;
+  line-height:1.2;
+  text-align:center;
+  font:30px 'VT323', monospace;
+}
+
+#f7 .decidir{
+  margin-top:0;
+  gap:0;
+}
+
+#f7 *{
+  box-sizing:border-box;
+}
+
+/* =========================
+   FIX F14 CARTA BONITA
+========================= */
+
+#f14{
+  position:absolute;
+  inset:0;
+  display:none;
+  background:#111;
+
+  padding:40px;
+  box-sizing:border-box;
+
+  overflow-y:auto;
+  overflow-x:hidden;
+
+  color:#fff;
+  font:28px 'VT323', monospace;
+  line-height:1.45;
+}
+
+/* caja interior */
+#f14{
+  text-align:center;
+}
+
+#f14 br{
+  display:block;
+  margin-bottom:10px;
+}
+
+/* texto legible */
+#f14{
+  max-width:none;
+}
+
+#f14{
+  white-space:normal;
+  word-break:break-word;
+}
+
+/* carta centrada visual */
+#f14{
+  justify-content:center;
+  align-items:flex-start;
+}
+
+#f14 > *{
+  max-width:950px;
+  width:100%;
+  margin-top:40px;
+}
+#f14.show{
+  display:flex;
+}
+/* botón volver */
+#f14 .carta{
+  margin-top:35px;
+  display:block;
+  text-align:center;
+}
+
+/* =========================
+   F14 BONITO SIN ROMPER F13
+========================= */
+
+/* oculto al inicio */
+#f14{
+  position:absolute;
+  inset:0;
+  background:#111;
+
+  display:none; /* importante */
+
+  padding:40px;
+  box-sizing:border-box;
+
+  overflow-y:auto;
+  overflow-x:hidden;
+
+  color:#fff;
+  font:26px 'VT323', monospace;
+  line-height:1.45;
+  text-align:center;
+}
+
+/* cuando JS lo abra */
+#f14.show{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+/* contenido */
+#f14{
+  white-space:normal;
+  word-break:break-word;
+}
+
+/* ancho bonito */
+#f14 > *{
+  max-width:920px;
+  width:100%;
+  margin-top:30px;
+}
+
+/* separaciones */
+#f14 br{
+  display:block;
+  margin-bottom:12px;
+}
+
+/* botón volver */
+#f14 .carta{
+  margin-top:35px;
+  display:block;
+  text-align:center;
+  cursor:pointer;
+}
+/* =========================
+   F14 CARTA ESTELAR PRO
+========================= */
+
+#f14{
+  position:absolute;
+  inset:0;
+  display:none;
+  overflow-y:auto;
+  overflow-x:hidden;
+
+  padding:50px 30px;
+  box-sizing:border-box;
+
+  background:#111;
+  color:#fff;
+  font:26px 'VT323', monospace;
+  line-height:1.5;
+  text-align:center;
+
+  animation:f14Fade .9s ease;
+}
+
+/* estrellas fondo */
+#f14::before{
+  content:'';
+  position:fixed;
+  inset:0;
+  background-image:
+    radial-gradient(#fff 1px, transparent 1px),
+    radial-gradient(#ff60b4 1px, transparent 1px),
+    radial-gradient(#72efff 1px, transparent 1px);
+  background-size:70px 70px,120px 120px,180px 180px;
+  opacity:.38;
+  animation:starsFall 30s linear infinite;
+  z-index:0;
+}
+
+/* fugaz */
+#f14::after{
+  content:'';
+  position:fixed;
+  width:140px;
+  height:2px;
+  top:18%;
+  left:-180px;
+  background:linear-gradient(to right,#fff,transparent);
+  box-shadow:0 0 8px #fff;
+  animation:shootingStar 7s linear infinite;
+  z-index:0;
+}
+
+/* contenido arriba */
+#f14 > *{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  margin:auto;
+}
+
+/* botón */
+#f14 .carta{
+  margin-top:35px;
+  display:block;
+  color:#ff60b4;
+}
+
+/* scrollbar bonito */
+#f14::-webkit-scrollbar{
+  width:10px;
+}
+
+#f14::-webkit-scrollbar-track{
+  background:#111;
+}
+
+#f14::-webkit-scrollbar-thumb{
+  background:#ff60b4;
+  border-radius:10px;
+}
+
+#f14::-webkit-scrollbar-thumb:hover{
+  background:#72efff;
+}
+
+/* animación entrada */
+@keyframes f14Fade{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
